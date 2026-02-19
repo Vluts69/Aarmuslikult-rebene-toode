@@ -1,6 +1,5 @@
-
-const list1=document.querySelector("#databox");
-let list=document.querySelector("#databox");
+let info=document.querySelector("#databox");
+let info2=document.querySelector("#databox");
 const url = "https://api.coingecko.com/api/v3/search?query=bitcoin";
 
 const getinfo =async()=>{
@@ -11,12 +10,24 @@ const getinfo =async()=>{
   let data1= await response.json();
   console.log(data1);
 
-  list=data1.coins;
-  console.log(list);
-  
-  
+  let id1= data1.coins[0].id;
+  let name= data1.coins[1].id;
 
-  list1.textContent="PETS PISDETZ";
- }
+  console.log(id1);
+  console.log(name);
+
+ // info.textContent= ("Nimi: " + id1);
+
+  //info2.textContent= ("Coin: " + name);
+  console.log(info);
+
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", (event) => {
+  button.textContent = `Click count: ${event.detail}`;
+});
+  
+  }
 
 getinfo();

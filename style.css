@@ -34,9 +34,29 @@ display: block;
 	width: 500px;
 	height: 600px;
 	background: transparent;
-	border: 2px white;
+	border: 2px solid white;
 	padding: 20px;
 	margin: 20px;
 	color: white;
 
+}
+
+#nup {
+	font-size: 20px;
+	background: none;
+	color: white;
+	border: none;
+	margin: 0px;
+	padding: 5PX;
+	-webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+
+}
+
+#nup:hover{
+	background-color: rgb(32, 21, 82);
+	font-size: 19px;
+	cursor: pointer;
 }
