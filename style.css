@@ -1,3 +1,42 @@
 body{
-	background-color: darkslateblue;
+	background: linear-gradient(90deg,rgba(2, 0, 128, 1) 0%, rgba(0, 0, 66, 1) 35%, rgba(0, 0, 0, 1) 100%);
+	margin: 0px;
+}
+
+.riba{
+width: 1920px;
+height: 50px;
+background-color: rgb(20, 19, 39);
+display: block;
+}
+
+.github{
+	font-size: 20px;
+	margin-left: 900px;
+	margin-top: 0px;
+	border: none;
+	background: none;
+	color: rgb(99, 97, 97);
+	padding: 10px;
+	padding-bottom: 16px;
+	  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+
+.github:hover{
+	background-color: rgb(32, 21, 82);
+	cursor: pointer;
+}
+#databox{
+
+	width: 500px;
+	height: 600px;
+	background: transparent;
+	border: 2px white;
+	padding: 20px;
+	margin: 20px;
+	color: white;
+
 }
