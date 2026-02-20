@@ -1,6 +1,8 @@
-let info=document.querySelector("#databox");
-let info2=document.querySelector("#databox");
-const url = "https://api.coingecko.com/api/v3/search?query=bitcoin";
+let btc=document.querySelector('div.selector option[value=BTC]');
+let info2=document.querySelector("#price");
+let logo = document.querySelector("#logo");
+const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&names=Bitcoin&symbols=btc&category=layer-1&price_change_percentage=1h&x_cg_demo_api_key=CG-8HcHiQvHAsjmq29FgruU8vwD";
+const button = document.querySelector("#nup");
 
 const getinfo =async()=>{
 
@@ -10,24 +12,34 @@ const getinfo =async()=>{
   let data1= await response.json();
   console.log(data1);
 
-  let id1= data1.coins[0].id;
-  let name= data1.coins[1].id;
+  let rtp= data1[0].current_price;
+  let name= data1[0].name;
+  //let name= data1.coins[1].id;
+  let logo1 = data1[0].image;
 
-  console.log(id1);
-  console.log(name);
+  console.log(rtp);
+  //console.log(id1);
+  //console.log(name);
 
  // info.textContent= ("Nimi: " + id1);
 
-  //info2.textContent= ("Coin: " + name);
-  console.log(info);
+  //info.textContent= ("Nimi: " + id1);
+  //onsole.log(info);
 
 
-const button = document.querySelector("button");
-
-button.addEventListener("click", (event) => {
-  button.textContent = `Click count: ${event.detail}`;
-});
+//button.addEventListener("click", function() {
   
-  }
+  info2.textContent= ("Nimi: " + name);
+  
+  //info.textContent= ("Price: " + rtp);
 
+
+ //logo.textContent= (logo);
+
+  console.log("clicked");
+  
+
+//});
+  
+}
 getinfo();

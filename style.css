@@ -47,7 +47,7 @@ display: block;
 	color: white;
 	border: none;
 	margin: 0px;
-	padding: 5PX;
+	padding: 0px;
 	-webkit-transition: background-color 1s ease-out;
   -moz-transition: background-color 1s ease-out;
   -o-transition: background-color 1s ease-out;
@@ -57,6 +57,67 @@ display: block;
 
 #nup:hover{
 	background-color: rgb(32, 21, 82);
-	font-size: 19px;
+	font-size: 20px;
 	cursor: pointer;
+}
+
+#infoks{
+
+font-style: italic;
+font-size: 25px;
+color: white;
+margin-top: -420px;
+}
+
+#logo{
+	width: 300px;
+	height: 400px;
+	background: transparent;
+	border: 2px solid white;
+	padding: 20px;
+	margin: 0px;
+	color: white;
+	margin-left: 700px;
+}
+
+#price{
+
+font-style: italic;
+font-size: 25px;
+color: white;
+margin-top: 5px;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+
+select {
+  border: 2px solid #dddddd;
+  background: none;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+select:hover,
+select:focus {
+  background: #A9A9A9;
+}
+
+select::picker-icon {
+  color: #999999;
+  transition: 0.4s rotate;
+}
+
+select:open::picker-icon {
+  rotate: 180deg;
+}
+
+
+label{
+	font-size: 25px;
+	font-family: italic;
+
 }
