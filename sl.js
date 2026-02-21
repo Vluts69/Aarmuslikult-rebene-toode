@@ -1,8 +1,11 @@
-let btc=document.querySelector('div.selector option[value=BTC]');
-let info2=document.querySelector("#price");
+const info2=document.querySelector("#infoks");
 let logo = document.querySelector("#logo");
 const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&names=Bitcoin&symbols=btc&category=layer-1&price_change_percentage=1h&x_cg_demo_api_key=CG-8HcHiQvHAsjmq29FgruU8vwD";
-const button = document.querySelector("#nup");
+const price = document.querySelector("#price");
+//const coin = document.querySelector("#coins");
+let coins = document.getElementById("coins");
+//const ethcoin = document.getElementById("coins3");
+
 
 const getinfo =async()=>{
 
@@ -14,32 +17,41 @@ const getinfo =async()=>{
 
   let rtp= data1[0].current_price;
   let name= data1[0].name;
-  //let name= data1.coins[1].id;
   let logo1 = data1[0].image;
 
-  console.log(rtp);
-  //console.log(id1);
-  //console.log(name);
-
- // info.textContent= ("Nimi: " + id1);
-
-  //info.textContent= ("Nimi: " + id1);
-  //onsole.log(info);
-
-
-//button.addEventListener("click", function() {
+    console.log(rtp);
   
-  info2.textContent= ("Nimi: " + name);
+    
+  
+
+  coins.addEventListener('change', function() {
+    let btc1 = coins.value;
+    
+    //let eth = ethcoin.value;
+    
+    
+
+     
+        //info2.textContent= ("Nimi: " + name);
+       //price.textContent=("Price: " + rtp);
+       console.log(coins);
+    
+
+
+ 
+  if (coins = "BTC") {
+    info2.textContent= ("Nimi: " + name);
+  }
+});
+
+  //info2.textContent= ("Nimi: " + name);
   
   //info.textContent= ("Price: " + rtp);
 
 
- //logo.textContent= (logo);
 
-  console.log("clicked");
-  
 
-//});
+
   
 }
 getinfo();
