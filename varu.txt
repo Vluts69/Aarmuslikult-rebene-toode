@@ -1,0 +1,11 @@
+
+     if (btc1 != 'BTC') {
+        info2.textContent= ("Nimi: " + name);
+       price.textContent=("Price: " + rtp);
+       console.log();
+        
+    }
+    else if (eth === "ETH") { 
+        info2.textContent= ("Nimi: " + name);
+        price.textContent=("Price: " + rtp);
+    }
